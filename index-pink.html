@@ -350,6 +350,36 @@
       margin-top: 8px;
     }
 
+    /* ===== THEME SWITCHER ===== */
+    .theme-switcher {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+    }
+    .theme-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 99px;
+      background: rgba(194,24,91,0.15);
+      border: 1px solid rgba(212,160,23,0.35);
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: 'Sarabun', sans-serif;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .theme-btn:hover {
+      background: rgba(194,24,91,0.28);
+      transform: translateY(-2px);
+    }
+
     /* ===== RESPONSIVE ===== */
     @media (min-width: 768px) {
       .container {
@@ -531,5 +561,13 @@
     </footer>
 
   </main>
+
+  <!-- THEME SWITCHER -->
+  <div class="theme-switcher">
+    <a class="theme-btn" href="index.html" aria-label="เปลี่ยนเป็นธีมเขียว">
+      🌾 ธีมเขียว
+    </a>
+  </div>
+
 </body>
 </html>
