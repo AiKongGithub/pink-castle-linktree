@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pink Castle Academy | KongNoCode</title>
+  <meta name="description" content="ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pink Castle Academy | KongNoCode" />
+  <meta property="og:description" content="ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน" />
+  <meta property="og:image" content="https://kongnocode.com/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KongNoCode">
+  <meta name="twitter:title" content="Pink Castle Academy | KongNoCode">
+  <meta name="twitter:description" content="ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน">
+  <meta name="twitter:image" content="https://kongnocode.com/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "KongNoCode",
+    "alternateName": "Pink Castle Academy",
+    "description": "ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน",
+    "url": "https://aikonggithub.github.io/pink-castle-linktree/",
+    "sameAs": [
+      "https://youtube.com/@KongNoCode",
+      "https://facebook.com/KongNoCode",
+      "https://tiktok.com/@KongNoCode",
+      "https://instagram.com/KongNoCode",
+      "https://x.com/KongNoCode",
+      "https://threads.net/@KongNoCode",
+      "https://linkedin.com/in/KongNoCode",
+      "https://kongnocode.com",
+      "https://pinkcastle.club"
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    h1, h2, h3 { font-size: inherit; font-weight: inherit; margin: 0; }
+
+    :root {
+      /* ===== ธีมชาวนาตาพระยา ===== */
+      /* หลัก: เขียวชะอุ่ม (ท้องไร่ท้องนา) */
+      --green-deep:   #1b4332;   /* เขียวเข้มกลางคืน */
+      --green-mid:    #2d6a4f;   /* เขียวใบไม้กลางวัน */
+      --green-light:  #74c69d;   /* เขียวอ่อนยอดข้าว */
+      --green-bright: #52b788;   /* เขียวสด */
+      /* รอง: เหลืองทอง (รวงข้าวสุก) */
+      --gold:         #e9c46a;   /* เหลืองทองรวงข้าว */
+      --gold-light:   #f4d35e;   /* เหลืองอ่อนแสงแดด */
+      --gold-warm:    #f3a712;   /* เหลืองส้มแดดยาม */
+      /* พื้นหลัง */
+      --bg-dark:      #081c15;   /* ดำเขียวกลางคืนนา */
+      --bg-mid:       #1b4332;   /* เขียวเข้มยามเย็น */
+      --bg-accent:    #0a2e1a;   /* เขียวมืดดิน */
+      /* card */
+      --card-bg:      rgba(45,106,79,0.20);
+      --card-hover:   rgba(45,106,79,0.38);
+      --shadow:       0 4px 20px rgba(27,67,50,0.5);
+      --shadow-hover: 0 8px 32px rgba(82,183,136,0.30);
+    }
+
+    body {
+      font-family: 'Sarabun', sans-serif;
+      min-height: 100vh;
+      /* พื้นหลัง: ท้องนายามค่ำ → เขียวชะอุ่มกลางวัน */
+      background: linear-gradient(160deg, #081c15 0%, #1b4332 45%, #0d3320 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px 60px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--bg-dark);
+      padding: 8px 16px;
+      z-index: 100;
+      font-weight: bold;
+      border-radius: 0 0 8px 0;
+      transition: top 0.3s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Decorative orbs — หิ่งห้อยในนา */
+    body::before, body::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::before {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(233,196,106,0.10) 0%, transparent 70%);
+      top: -120px; right: -100px;
+    }
+    body::after {
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(82,183,136,0.13) 0%, transparent 70%);
+      bottom: -80px; left: -80px;
+    }
+
+    .container {
+      max-width: 520px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== PROFILE ===== */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .avatar-ring {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      padding: 3px;
+      /* วงแหวน: ไล่สีเขียว-เหลือง-เขียว เหมือนรวงข้าวล้อมทุ่ง */
+      background: linear-gradient(135deg, var(--green-bright) 0%, var(--gold) 50%, var(--green-light) 100%);
+      box-shadow: 0 0 28px rgba(233,196,106,0.45);
+      animation: spin-ring 10s linear infinite;
+    }
+
+    @keyframes spin-ring {
+      from { filter: hue-rotate(0deg); }
+      to   { filter: hue-rotate(360deg); }
+    }
+
+    .avatar-inner {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-deep) 0%, var(--bg-dark) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 42px;
+    }
+
+    .badge {
+      position: absolute;
+      bottom: 4px; right: 4px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 50%;
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .profile-name {
+      font-size: 1.55rem;
+      font-weight: 800;
+      /* ชื่อ: ทองเหลืองอร่าม เหมือนรวงข้าวแสงอาทิตย์ */
+      background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold-warm) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .profile-handle {
+      font-size: 0.95rem;
+      color: var(--green-light);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .profile-bio {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.6;
+      max-width: 340px;
+      margin-bottom: 14px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tag {
+      padding: 3px 12px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .tag-green { background: rgba(82,183,136,0.18); color: var(--green-light); border: 1px solid rgba(82,183,136,0.4); }
+    .tag-gold  { background: rgba(233,196,106,0.18); color: var(--gold-light);  border: 1px solid rgba(233,196,106,0.4); }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      display: flex; align-items: center; gap: 12px;
+      margin: 0 0 24px;
+      color: rgba(255,255,255,0.25);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      /* เส้นแบ่ง: ไล่สีเขียว-ทอง */
+      background: linear-gradient(90deg, transparent, rgba(233,196,106,0.35), transparent);
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.75;
+      margin: 20px 0 10px;
+    }
+
+    /* ===== LINKS ===== */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      list-style: none;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      border-radius: 16px;
+      background: var(--card-bg);
+      /* ขอบ: เขียวอ่อนจาง */
+      border: 1px solid rgba(82,183,136,0.15);
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+
+    .link-btn:hover {
+      background: var(--card-hover);
+      border-color: rgba(233,196,106,0.40);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .link-btn:active { transform: translateY(0); }
+
+    .link-btn:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233, 196, 106, 0.3);
+    }
+
+    .link-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .link-text { flex: 1; }
+    .link-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      opacity: 0.55;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+    .link-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .link-arrow {
+      font-size: 0.85rem;
+      opacity: 0.35;
+    }
+
+    /* Icon colour themes — ปรับให้เข้ากับธีมเขียว */
+    .icon-youtube  { background: rgba(255, 60, 60, 0.18); }
+    .icon-facebook { background: rgba(66, 103, 178, 0.18); }
+    .icon-tiktok   { background: rgba(0, 0, 0, 0.40); border: 1px solid rgba(255,255,255,0.08); }
+    .icon-ig       { background: linear-gradient(135deg, rgba(245,96,0,0.18), rgba(188,42,141,0.18)); }
+    .icon-x        { background: rgba(255,255,255,0.07); }
+    .icon-threads  { background: rgba(255,255,255,0.07); }
+    .icon-linkedin { background: rgba(0, 119, 181, 0.18); }
+    .icon-discord  { background: rgba(88, 101, 242, 0.18); }
+    .icon-line     { background: rgba(0, 185, 0, 0.20); }
+    /* email & web ปรับเป็น accent เขียว-ทอง */
+    .icon-email    { background: rgba(233,196,106,0.15); }
+    .icon-web      { background: rgba(82,183,136,0.18); }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 44px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.28);
+      line-height: 1.7;
+    }
+    .footer-castle {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .footer-motto {
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .copyright {
+      font-size: 0.75rem;
+      opacity: 0.5;
+      margin-top: 8px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .container { max-width: 600px; }
+      .profile-name { font-size: 1.6rem; }
+      .link-btn { padding: 16px 18px; }
+    }
+    @media (min-width: 1024px) {
+      .container { max-width: 640px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#links-social" class="skip-link">ข้ามไปยังลิงก์ทั้งหมด</a>
+
+  <main class="container">
+
+    <!-- PROFILE -->
+    <header class="profile">
+      <div class="avatar-wrap">
+        <div class="avatar-ring">
+          <div class="avatar-inner">🌾</div>
+        </div>
+        <div class="badge">👑</div>
+      </div>
+      <h1 class="profile-name">PINK CASTLE ACADEMY</h1>
+      <div class="profile-handle">@KongNoCode</div>
+      <div class="profile-bio">ชาวนาตาพระยา สอน AI สร้างธุรกิจ<br>เศรษฐีชุดนอน 🌾🤖</div>
+      <div class="tags">
+        <span class="tag tag-green">AI Creator</span>
+        <span class="tag tag-gold">No-Code</span>
+        <span class="tag tag-green">SaaS Builder</span>
+        <span class="tag tag-gold">สามก๊ก</span>
+      </div>
+    </header>
+
+    <h2 class="divider">ช่องทางติดตาม</h2>
+
+    <!-- SOCIAL MEDIA -->
+    <h3 class="section-header">📺 สื่อสังคมออนไลน์</h3>
+    <nav class="links" id="links-social" aria-label="สื่อสังคมออนไลน์">
+
+      <a class="link-btn" href="https://youtube.com/@KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง YouTube KongNoCode">
+        <div class="link-icon icon-youtube">▶️</div>
+        <div class="link-text">
+          <div class="link-label">Video Content</div>
+          <div class="link-title">YouTube — KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://facebook.com/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง Facebook KongNoCode">
+        <div class="link-icon icon-facebook">📘</div>
+        <div class="link-text">
+          <div class="link-label">Community</div>
+          <div class="link-title">Facebook — KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://tiktok.com/@KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง TikTok KongNoCode">
+        <div class="link-icon icon-tiktok">🎵</div>
+        <div class="link-text">
+          <div class="link-label">Short Video</div>
+          <div class="link-title">TikTok — @KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://instagram.com/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง Instagram KongNoCode">
+        <div class="link-icon icon-ig">📸</div>
+        <div class="link-text">
+          <div class="link-label">Visual Story</div>
+          <div class="link-title">Instagram — @KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://x.com/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง X (Twitter) KongNoCode">
+        <div class="link-icon icon-x">𝕏</div>
+        <div class="link-text">
+          <div class="link-label">Thoughts & Updates</div>
+          <div class="link-title">X (Twitter) — @KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://threads.net/@KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง Threads KongNoCode">
+        <div class="link-icon icon-threads">🧵</div>
+        <div class="link-text">
+          <div class="link-label">Conversations</div>
+          <div class="link-title">Threads — @KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://linkedin.com/in/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง LinkedIn KongNoCode">
+        <div class="link-icon icon-linkedin">💼</div>
+        <div class="link-text">
+          <div class="link-label">Professional</div>
+          <div class="link-title">LinkedIn — KongNoCode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://discord.gg/pinkcastle" target="_blank" rel="noopener" aria-label="ไปยัง Discord Pink Castle">
+        <div class="link-icon icon-discord">🎮</div>
+        <div class="link-text">
+          <div class="link-label">Community Hub</div>
+          <div class="link-title">Discord — Pink Castle</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+    </nav>
+
+    <h3 class="section-header">📬 ติดต่อ &amp; เว็บไซต์</h3>
+    <nav class="links" aria-label="ช่องทางติดต่อและเว็บไซต์">
+
+      <a class="link-btn" href="https://line.me/R/ti/p/@kongnocode" target="_blank" rel="noopener" aria-label="ไปยัง LINE Official KongNoCode">
+        <div class="link-icon icon-line">💬</div>
+        <div class="link-text">
+          <div class="link-label">LINE Official</div>
+          <div class="link-title">LINE OA — @kongnocode</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="mailto:kong@kongnocode.com" aria-label="ส่งอีเมลถึง KongNoCode">
+        <div class="link-icon icon-email">✉️</div>
+        <div class="link-text">
+          <div class="link-label">Business Inquiry</div>
+          <div class="link-title">kong@kongnocode.com</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://kongnocode.com" target="_blank" rel="noopener" aria-label="ไปยังเว็บไซต์ kongnocode.com">
+        <div class="link-icon icon-web">🌐</div>
+        <div class="link-text">
+          <div class="link-label">Personal Website</div>
+          <div class="link-title">kongnocode.com</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="https://pinkcastle.club" target="_blank" rel="noopener" aria-label="ไปยังเว็บไซต์ pinkcastle.club">
+        <div class="link-icon icon-web">🏰</div>
+        <div class="link-text">
+          <div class="link-label">Academy Hub</div>
+          <div class="link-title">pinkcastle.club</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+    </nav>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-castle">🌾</div>
+      Pink Castle Corporation<br />
+      <span class="footer-motto">สามประสานจึงไร้พ่าย</span>
+      <p class="copyright">© 2025 Pink Castle Corporation</p>
+    </footer>
+
+  </main>
+</body>
+</html>
