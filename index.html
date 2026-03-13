@@ -5,14 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pink Castle Academy | KongNoCode</title>
   <meta name="description" content="ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Pink Castle Academy | KongNoCode" />
   <meta property="og:description" content="ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน" />
   <meta property="og:image" content="https://kongnocode.com/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@KongNoCode">
+  <meta name="twitter:title" content="Pink Castle Academy | KongNoCode">
+  <meta name="twitter:description" content="ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน">
+  <meta name="twitter:image" content="https://kongnocode.com/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏰</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏰</text></svg>">
+
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "KongNoCode",
+    "alternateName": "Pink Castle Academy",
+    "description": "ชาวนาตาพระยา สอน AI สร้างธุรกิจ — เศรษฐีชุดนอน",
+    "url": "https://aikonggithub.github.io/pink-castle-linktree/",
+    "sameAs": [
+      "https://youtube.com/@KongNoCode",
+      "https://facebook.com/KongNoCode",
+      "https://tiktok.com/@KongNoCode",
+      "https://instagram.com/KongNoCode",
+      "https://x.com/KongNoCode",
+      "https://threads.net/@KongNoCode",
+      "https://linkedin.com/in/KongNoCode",
+      "https://kongnocode.com",
+      "https://pinkcastle.club"
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Reset heading defaults so semantic h1/h2/h3 don't shift layout */
+    h1, h2, h3 { font-size: inherit; font-weight: inherit; margin: 0; }
 
     :root {
       --pink-deep:   #c2185b;
@@ -37,6 +80,23 @@
       padding: 40px 16px 60px;
       position: relative;
       overflow-x: hidden;
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #D4A017;
+      color: #1a0a2e;
+      padding: 8px 16px;
+      z-index: 100;
+      font-weight: bold;
+      border-radius: 0 0 8px 0;
+      transition: top 0.3s;
+    }
+    .skip-link:focus {
+      top: 0;
     }
 
     /* Decorative orbs */
@@ -189,6 +249,7 @@
       flex-direction: column;
       gap: 12px;
       width: 100%;
+      list-style: none;
     }
 
     .link-btn {
@@ -215,6 +276,13 @@
     }
 
     .link-btn:active { transform: translateY(0); }
+
+    .link-btn:focus-visible {
+      outline: 3px solid #D4A017;
+      outline-offset: 3px;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 160, 23, 0.3);
+    }
 
     .link-icon {
       width: 42px; height: 42px;
@@ -274,22 +342,55 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       font-weight: 700;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
+    }
+    .copyright {
+      font-size: 0.75rem;
+      opacity: 0.5;
+      margin-top: 8px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .container {
+        max-width: 600px;
+      }
+      .profile-name {
+        font-size: 1.6rem;
+      }
+      .link-btn {
+        padding: 16px 18px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 640px;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <a href="#links-social" class="skip-link">ข้ามไปยังลิงก์ทั้งหมด</a>
+
+  <main class="container">
 
     <!-- PROFILE -->
-    <div class="profile">
+    <header class="profile">
       <div class="avatar-wrap">
         <div class="avatar-ring">
           <div class="avatar-inner">🏰</div>
         </div>
         <div class="badge">👑</div>
       </div>
-      <div class="profile-name">PINK CASTLE ACADEMY</div>
+      <h1 class="profile-name">PINK CASTLE ACADEMY</h1>
       <div class="profile-handle">@KongNoCode</div>
       <div class="profile-bio">ชาวนาตาพระยา สอน AI สร้างธุรกิจ<br>เศรษฐีชุดนอน 🌾🤖</div>
       <div class="tags">
@@ -298,15 +399,15 @@
         <span class="tag tag-pink">SaaS Builder</span>
         <span class="tag tag-gold">สามก๊ก</span>
       </div>
-    </div>
+    </header>
 
-    <div class="divider">ช่องทางติดตาม</div>
+    <h2 class="divider">ช่องทางติดตาม</h2>
 
     <!-- SOCIAL MEDIA -->
-    <div class="section-header">📺 สื่อสังคมออนไลน์</div>
-    <div class="links">
+    <h3 class="section-header">📺 สื่อสังคมออนไลน์</h3>
+    <nav class="links" id="links-social" aria-label="สื่อสังคมออนไลน์">
 
-      <a class="link-btn" href="https://youtube.com/@KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://youtube.com/@KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง YouTube KongNoCode">
         <div class="link-icon icon-youtube">▶️</div>
         <div class="link-text">
           <div class="link-label">Video Content</div>
@@ -315,7 +416,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://facebook.com/KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://facebook.com/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง Facebook KongNoCode">
         <div class="link-icon icon-facebook">📘</div>
         <div class="link-text">
           <div class="link-label">Community</div>
@@ -324,7 +425,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://tiktok.com/@KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://tiktok.com/@KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง TikTok KongNoCode">
         <div class="link-icon icon-tiktok">🎵</div>
         <div class="link-text">
           <div class="link-label">Short Video</div>
@@ -333,7 +434,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://instagram.com/KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://instagram.com/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง Instagram KongNoCode">
         <div class="link-icon icon-ig">📸</div>
         <div class="link-text">
           <div class="link-label">Visual Story</div>
@@ -342,7 +443,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://x.com/KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://x.com/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง X (Twitter) KongNoCode">
         <div class="link-icon icon-x">𝕏</div>
         <div class="link-text">
           <div class="link-label">Thoughts & Updates</div>
@@ -351,7 +452,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://threads.net/@KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://threads.net/@KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง Threads KongNoCode">
         <div class="link-icon icon-threads">🧵</div>
         <div class="link-text">
           <div class="link-label">Conversations</div>
@@ -360,7 +461,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://linkedin.com/in/KongNoCode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://linkedin.com/in/KongNoCode" target="_blank" rel="noopener" aria-label="ไปยัง LinkedIn KongNoCode">
         <div class="link-icon icon-linkedin">💼</div>
         <div class="link-text">
           <div class="link-label">Professional</div>
@@ -369,7 +470,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://discord.gg/pinkcastle" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://discord.gg/pinkcastle" target="_blank" rel="noopener" aria-label="ไปยัง Discord Pink Castle">
         <div class="link-icon icon-discord">🎮</div>
         <div class="link-text">
           <div class="link-label">Community Hub</div>
@@ -378,12 +479,12 @@
         <div class="link-arrow">›</div>
       </a>
 
-    </div>
+    </nav>
 
-    <div class="section-header">📬 ติดต่อ &amp; เว็บไซต์</div>
-    <div class="links">
+    <h3 class="section-header">📬 ติดต่อ &amp; เว็บไซต์</h3>
+    <nav class="links" aria-label="ช่องทางติดต่อและเว็บไซต์">
 
-      <a class="link-btn" href="https://line.me/R/ti/p/@kongnocode" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://line.me/R/ti/p/@kongnocode" target="_blank" rel="noopener" aria-label="ไปยัง LINE Official KongNoCode">
         <div class="link-icon icon-line">💬</div>
         <div class="link-text">
           <div class="link-label">LINE Official</div>
@@ -392,7 +493,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="mailto:kong@kongnocode.com">
+      <a class="link-btn" href="mailto:kong@kongnocode.com" aria-label="ส่งอีเมลถึง KongNoCode">
         <div class="link-icon icon-email">✉️</div>
         <div class="link-text">
           <div class="link-label">Business Inquiry</div>
@@ -401,7 +502,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://kongnocode.com" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://kongnocode.com" target="_blank" rel="noopener" aria-label="ไปยังเว็บไซต์ kongnocode.com">
         <div class="link-icon icon-web">🌐</div>
         <div class="link-text">
           <div class="link-label">Personal Website</div>
@@ -410,7 +511,7 @@
         <div class="link-arrow">›</div>
       </a>
 
-      <a class="link-btn" href="https://pinkcastle.club" target="_blank" rel="noopener">
+      <a class="link-btn" href="https://pinkcastle.club" target="_blank" rel="noopener" aria-label="ไปยังเว็บไซต์ pinkcastle.club">
         <div class="link-icon icon-web">🏰</div>
         <div class="link-text">
           <div class="link-label">Academy Hub</div>
@@ -419,15 +520,16 @@
         <div class="link-arrow">›</div>
       </a>
 
-    </div>
+    </nav>
 
     <!-- FOOTER -->
-    <div class="footer">
+    <footer class="footer">
       <div class="footer-castle">🏰</div>
       Pink Castle Corporation<br />
       <span class="footer-motto">สามประสานจึงไร้พ่าย</span>
-    </div>
+      <p class="copyright">© 2025 Pink Castle Corporation</p>
+    </footer>
 
-  </div>
+  </main>
 </body>
 </html>
